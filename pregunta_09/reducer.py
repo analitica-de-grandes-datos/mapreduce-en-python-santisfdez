@@ -14,6 +14,6 @@ else:
                         key = lambda data: (int(data.split()[2]))
                         )
 
-    lista = elements[0:5]
+    lista = elements[0:6]
     for element in lista:
         sys.stdout.write("{}".format(element))
