@@ -3,17 +3,16 @@
 #
 import sys
 
-if __name__ == '__main__':
+elements = []
 
-    elements = []
+for row in sys.stdin:
+    elements.append(row)
 
-    for line in sys.stdin:
-        elements.append(line)
 else:
     elements = sorted(
-                elements,
-                key = lambda data: (data,split()[0], int(data.split()[2]))
-                )
+                        elements,
+                        key = lambda data: (data.split()[0], int(data.split()[2]))
+                        )
 
     for element in elements:
         sys.stdout.write("{}".format(element))
